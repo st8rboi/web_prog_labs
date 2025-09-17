@@ -1,46 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./css/styles.css"/>
-    <link rel="stylesheet" href="./css/reset.css"/>
-    <title>ChatGPT-4</title>
+    <link rel="stylesheet" href="./css/reset.css" />
+    <link rel="stylesheet" href="./css/styles.css" />
+    <title>GPT-4</title>
 </head>
+
 <body>
-    <div class="page">
-        <header class="header">
-            <div class="header__logo">
-                <a href="#" class="header__link"><img class="header__img" src="assets/img/GPT-4.svg"></a>
-            </div>
-            <nav class="header__menu menu">
-                <ul class="menu__list">
+    <header class="header">
+        <nav>
+            <ul class="header__menu menu">
+                <li class="menu__item">
+                    <a href="#" class="menu__link">
+                        <img class="menu__logo" src="./assets/img/GPT-4.svg">
+                    </a>
+                </li>
                 <li class="menu__item"><a href="#" class="menu__link menu__link--active">Главная</a></li>
-                <li class="menu__item"><a href="#" class="menu__link">Что такое ChatGPT</a></li>
+                <li class="menu__item"><a href="#" class="menu__link">Что такое GPT?</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Open AI</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Кейсы</a></li>
                 <li class="menu__item"><a href="#" class="menu__link">Библиотека</a></li>
-                </ul>
-            </nav>
-            <div class="header__cta cta_buttons">
-                <button class="cta_buttons__btn">Войти</button>
-                <button class="cta_buttons__btn cta_buttons__btn--primary">Регистрация</button>
+            </ul>
+        </nav>
+        <div class="header__actions actions">
+            <button class="actions__btn actions__btn--secondary">Войти</button>
+            <button class="actions__btn actions__btn--primary">Регистрация</button>
+        </div>
+    </header>
+    <section class="main">
+        <div class="main__content content">
+            <h1 class="content__title">Построим Что-нибудь Невероятное с<br> GPT-4 OpenAI</h1>
+            <p class="content__description">Однако кровать для помощи в путешествии неприятна.
+                Не<br> мысли все осуществляют благословение. Снисхождение<br> ко всему,
+                радость, изменение бурной привязанности.<br> Вечеринку мы лет на заказ разрешили.</p>
+            <div class="content__form form">
+                <input type="email" placeholder="Введите Email" class="form__input">
+                <button class="form__btn">Начать</button>
             </div>
-        </header>
-        <section class="main">
-            <div class="main__content">
-            <h1 class="main__title">Построим Что-нибудь Невероятное с GPT-4 OpenAI</h1>
-            <text class="main__text">
-                Однако кровать для помощи в путешествии неприятна. 
-                Не мысли все осуществляют благословение. Снисхождение ко всему, радость, изменение бурной привязанности.
-                Вечеринку мы лет на заказ разрешили.</text>
-            <div>
-            <input type="email" placeholder="Введите Email" class="main__input"/>
-            <button class="main__btn btn">Начать</button>     
+            <div class="content__stats stats">
+                <img class="stats__img" src="./assets/img/Group 81.svg">
+                <span class="stats__text">1,600 человек запросило доступ за последние 24 часа</span>
             </div>
-            </div>
-            <img width="667.4100341796875" height="701.5901489257812" src="./assets/img/Illustration.svg" class="main__img img">
-        </section>
-    </div>
+        </div>
+        <div class="main__add add">
+            <img class="add__img" src="./assets/img/Illustration.svg">
+        </div>
+    </section>
+    <section class="brands">
+        <img class="brands__img" src="./assets/brands_logo/google.svg" />
+        <img class="brands__img" src="./assets/brands_logo/slack.svg" />
+        <img class="brands__img" src="./assets/brands_logo/atlassian.svg" />
+        <img class="brands__img" src="./assets/brands_logo/dropbox.svg" />
+        <img class="brands__img" src="./assets/brands_logo/shopify.svg" />
+    </section>
 </body>
+</body>
+
 </html>
