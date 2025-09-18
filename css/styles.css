@@ -21,30 +21,37 @@
 }
 
 body {
-    background-color: #031b34;;
+    background-color: #031b34;
     padding: 2rem;
     font-family: "Manrope";
 }
 
-.header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-
-
-.header__menu {
-    display: flex;
-    column-gap: 3rem;
-    padding-left: 3rem;
-    align-items: center;
-}
-
+/* Ссылки в меню */
 .menu__link {
     font-size: 18px;
     color: #fff;
+    transition: all 0.3s ease;
+    position: relative;
+    padding: 0.5rem 0;
 }
 
+.menu__link:hover {
+    color: #F49867;
+}
+
+.menu__link--active {
+    font-weight: 600;
+}
+
+.menu__link--active::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;    
+    background: url("../assets/img/gradient_line.svg") repeat-x 0 0 / auto 100%;
+}
 
 .menu__logo {
     transition: transform 0.3s ease;
@@ -54,6 +61,18 @@ body {
     transform: scale(1.05);
 }
 
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header__menu {
+    display: flex;
+    column-gap: 3.5rem;
+    padding-left: 3rem;
+    align-items: center;
+}
 
 .header__actions {
     display: flex;
@@ -61,6 +80,7 @@ body {
     column-gap: 1rem;
 }
 
+/* Кнопки */
 .actions__btn {
     padding: 0.75rem 1.5rem;
     border-radius: 4px;
@@ -68,12 +88,30 @@ body {
     font-weight: 500;
     min-width: 100px;
     color: #fff;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Manrope";
 }
 
 .actions__btn--primary {
     background-color: #FF4820;
 }
 
+.actions__btn--primary:hover {
+    background-color: #e0411d;
+    transform: translateY(-2px);
+}
+
+.actions__btn--secondary {
+    background-color: transparent;
+}
+
+.actions__btn--secondary:hover {
+    transform: translateY(-2px);
+}
+
+
+/*Основная секция*/
 .main {
     display: flex;
     justify-content: center;
@@ -83,7 +121,7 @@ body {
     display: flex;
     flex-direction: column;
     margin-left: 3rem;
-    margin-top: 4rem;
+    margin-top: 5rem;
     row-gap: 2rem;
 }
 
@@ -120,36 +158,7 @@ body {
     color: #81AFDD;
     line-height: 1.2;
     margin: 0;
-}
-
-.content__form {
-    display: flex;
-}
-
-.form__btn {
-    flex: 0.3;
-    color: #fff;
-    padding: 0.75rem 1.5rem;
-    border-radius: 0px 5px 5px 0px;
-    font-size: 20px;
-    font-weight: 500;
-    min-height: 73px;
-    background-color: #FF4820;
-}
-
-.form__input {
-    flex: 1;
-    padding: 1.125rem 1.5rem;
-    border: none;
-    border-radius: 5px 0px 0px 5px;
-    background-color: #052D56;
-    color: #fff;
-    font-size: 15px;
-    min-width: 250px;
-}
-
-.form__input::placeholder {
-    font-size: 20px;
+    margin-top: 0.5rem;
 }
 
 .stats {
@@ -166,12 +175,60 @@ body {
 .brands {
     display: flex;
     padding-top: 5rem;
-    padding-bottom: 1rem;
     column-gap: 2rem;
     justify-content: center;
 }
 
-/* Стили для секции "Что такое GPT-4" */
+/* Форма */
+.content__form {
+    display: flex;
+    margin-top: 0.5rem;
+}
+
+.form__btn {
+    flex: 0.3;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 0px 5px 5px 0px;
+    font-size: 20px;
+    font-weight: 500;
+    min-height: 73px;
+    background-color: #FF4820;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: "Manrope";
+}
+
+.form__btn:hover {
+    background-color: #e0411d;
+    transform: translateY(-2px);;
+}
+
+.form__input {
+    flex: 0.75;
+    padding: 1.125rem 1.5rem;
+    border: none;
+    border-radius: 5px 0px 0px 5px;
+    background-color: #052D56;
+    color: #fff;
+    font-size: 15px;
+    min-width: 250px;
+    font-family: "Manrope";
+    transition: all 0.3s ease;
+}
+
+.form__input:focus {
+    outline: none;
+    box-shadow: 0 0 0 2px #ff48204d;
+}
+
+.form__input::placeholder {
+    font-size: 20px;
+    color: #81AFDD;
+}
+
+/* Секция "Что такое GPT-4" */
 .what_is_chatgpt_section {
     display: flex;
     flex-direction: column;
@@ -217,10 +274,12 @@ body {
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
+    padding: 0.5rem 0;
 }
 
 .what_is_chatgpt_section__middle .middle_cta:hover {
     border-bottom: 1px solid #ff8a71;
+    transform: translateY(-2px);
 }
 
 .what_is_chatgpt_section__bottom {
@@ -248,7 +307,7 @@ body {
     line-height: 1.8;
 }
 
-/* Стили для заголовков с линией */
+/* Заголовки с линией */
 .lined_header {
     position: relative;
     padding-bottom: 1rem;
@@ -260,13 +319,13 @@ body {
 .lined_header::before {
     content: "";
     position: absolute;
-    top: -1rem;
+    top: -0.8rem;
     width: 38px;
     height: 3px;
     background: url("../assets/img/gradient_line.svg") no-repeat 0 0 transparent;
 }
 
-/* Стили для секции "Будущее наступило" */
+/* Секция "Будущее наступило" */
 .future_here {
     display: flex;
     column-gap: 6rem;
@@ -300,10 +359,12 @@ body {
     text-decoration: none;
     border-bottom: 1px solid transparent;
     transition: all 0.3s ease;
+    padding: 0.5rem 0;
 }
 
 .future_here__left .left__cta:hover {
     border-bottom: 1px solid #f49867;
+    transform: translateY(-2px);
 }
 
 .future_here__right {
